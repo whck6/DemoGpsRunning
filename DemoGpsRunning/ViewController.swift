@@ -48,8 +48,8 @@ extension ViewController: GpsRunningServiceDelegate {
     print("GpsRunningService is denied!!")
   }
   
-  func fireTimer(timer: Timer) {
-    print(timer.fireDate)
-    timeLabel.text = timer.fireDate.description
+  func fire(timestamp: TimeInterval) {
+    print(timestamp)
+    timeLabel.text = Date(timeIntervalSince1970: timestamp).description
   }
 }

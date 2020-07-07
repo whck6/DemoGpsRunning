@@ -10,6 +10,6 @@ import Foundation
 
 struct MyTimer {
   var isPause = true
-  var startDate: Date?
   var timer: Timer
+  var startDates: [Date]
 }

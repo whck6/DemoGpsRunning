@@ -12,7 +12,7 @@ import CoreLocation
 protocol GpsRunningServiceDelegate {
   func isReady()
   func isDenied()
-  func fireTimer(timer: Timer)
+  func fire(timestamp: TimeInterval)
 }
 
 class GpsRunningService: NSObject {
@@ -22,6 +22,10 @@ class GpsRunningService: NSObject {
   private var delegate: GpsRunningServiceDelegate?
   
   private var myTimer: MyTimer?
+  
+  private var runingTimestamp: TimeInterval = 0.0
+  
+  private var lastTimestamp: TimeInterval = 0.0
   
   init(delegate: GpsRunningServiceDelegate) {
     super.init()
@@ -50,28 +54,25 @@ class GpsRunningService: NSObject {
   func initTimer() {
     let timer = Timer(timeInterval: 1.0, repeats: true, block: { (timer) in
       guard self.myTimer?.isPause == false else {
+        self.lastTimestamp = timer.fireDate.timeIntervalSince1970
         return
       }
-      
-      self.delegate?.fireTimer(timer: timer)
+      self.runingTimestamp += (timer.fireDate.timeIntervalSince1970  - self.lastTimestamp)
+      self.delegate?.fire(timestamp: self.runingTimestamp)
+      self.lastTimestamp = timer.fireDate.timeIntervalSince1970
     })
     timer.tolerance = 0.1
-    myTimer = MyTimer.init(timer: timer)
     RunLoop.current.add(timer, forMode: .common)
+    myTimer = MyTimer.init(timer: timer, startDates: [])
   }
   
   func startTimer() {
-    if myTimer?.startDate == nil {
-      myTimer?.startDate = Date()
-    }
-    
+    myTimer?.startDates.append(Date())
     myTimer?.isPause = false
-    myTimer?.timer.fire()
   }
   
   func stopTimer() {
     myTimer?.isPause = true
-    myTimer?.timer.invalidate()
   }
 }
 
