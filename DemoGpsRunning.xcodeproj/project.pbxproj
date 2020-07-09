@@ -14,7 +14,6 @@
 		7E9E5A18AEFC328F73D68B149F56D8AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 097A80227667419C8CEF37F05283C72F /* Main.storyboard */; };
 		8763A5F7BFA7980CB985C109435B7FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0705DA6DE9E4BE57DD16EBC262417CFF /* AppDelegate.swift */; };
 		AB2B4C54F363C881CD77EA0E04D189AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609DDF35BE5C8761CADE333BB3152C2 /* ViewController.swift */; };
-		C4CB4312EB22C4276D19351805ACC153 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF2395E90B7AE143459BB8E8C14D679 /* SceneDelegate.swift */; };
 		C60372198F80102DA6F7A23EC8586DF8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F112397E24913B0134E90EFC5EEBB2 /* Location.swift */; };
 		E4451DE04D71E1DB062BE8EC6B25AB25 /* GpsRunningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D0FD5C3D707DC71BAE5126EAF46610 /* GpsRunningService.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +28,6 @@
 		881CB25B3375C273FBEF7759A4E03B4A /* MyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimer.swift; sourceTree = "<group>"; };
 		9609DDF35BE5C8761CADE333BB3152C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD475B5DE49992D17DB4AF826EA7EA6F /* LocationsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsStorage.swift; sourceTree = "<group>"; };
-		CDF2395E90B7AE143459BB8E8C14D679 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F8B87376F2EAA7819AEF317ED60C0A2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD6776BED3527BB10C73A20A2C470043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,20 +43,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		512FF8E9ED4F2D5DCF1152460E52504B = {
-			isa = PBXGroup;
-			children = (
-				B4CB166EAA11BAC9C9D4C3FCCE3D0FC6 /* DemoGpsRunning */,
-				43E484D0844E21C398B27DB8D8FEA950 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
 		43E484D0844E21C398B27DB8D8FEA950 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				49BB2E9F31F25ABC0D8658869ED21B83 /* DemoGpsRunning.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		512FF8E9ED4F2D5DCF1152460E52504B = {
+			isa = PBXGroup;
+			children = (
+				B4CB166EAA11BAC9C9D4C3FCCE3D0FC6 /* DemoGpsRunning */,
+				43E484D0844E21C398B27DB8D8FEA950 /* Products */,
+			);
 			sourceTree = "<group>";
 		};
 		B4CB166EAA11BAC9C9D4C3FCCE3D0FC6 /* DemoGpsRunning */ = {
@@ -73,7 +71,6 @@
 				CD475B5DE49992D17DB4AF826EA7EA6F /* LocationsStorage.swift */,
 				097A80227667419C8CEF37F05283C72F /* Main.storyboard */,
 				881CB25B3375C273FBEF7759A4E03B4A /* MyTimer.swift */,
-				CDF2395E90B7AE143459BB8E8C14D679 /* SceneDelegate.swift */,
 				9609DDF35BE5C8761CADE333BB3152C2 /* ViewController.swift */,
 			);
 			path = DemoGpsRunning;
@@ -155,7 +152,6 @@
 				C60372198F80102DA6F7A23EC8586DF8 /* Location.swift in Sources */,
 				1FA69F62B229F94993CDB46EBF5CFAD0 /* LocationsStorage.swift in Sources */,
 				1637D63A6B02BF8FF22461DA0180052D /* MyTimer.swift in Sources */,
-				C4CB4312EB22C4276D19351805ACC153 /* SceneDelegate.swift in Sources */,
 				AB2B4C54F363C881CD77EA0E04D189AD /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +178,79 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1532CEE57C4C7E547E17403A9E9E1671 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3PVQ5JB64;
+				INFOPLIST_FILE = DemoGpsRunning/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wenhao.DemoGpsRunning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		28B58B9206980AA7E4EDC431D6992498 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		2C2B133A468983799BF19DFE519EDC6E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -242,66 +311,14 @@
 			};
 			name = Debug;
 		};
-		28B58B9206980AA7E4EDC431D6992498 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		6C17F8FDBD1A5111143D6603A1139EF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3PVQ5JB64;
 				INFOPLIST_FILE = DemoGpsRunning/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,40 +330,23 @@
 			};
 			name = Debug;
 		};
-		1532CEE57C4C7E547E17403A9E9E1671 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DemoGpsRunning/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wenhao.DemoGpsRunning;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52575E2DC3A684A44CAAC0AD34029DAD /* Build configuration list for PBXProject "DemoGpsRunning" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2C2B133A468983799BF19DFE519EDC6E /* Debug */,
-				28B58B9206980AA7E4EDC431D6992498 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2689FB516DEBA6B65851BF63A5CC1015 /* Build configuration list for PBXNativeTarget "DemoGpsRunning" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C17F8FDBD1A5111143D6603A1139EF1 /* Debug */,
 				1532CEE57C4C7E547E17403A9E9E1671 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52575E2DC3A684A44CAAC0AD34029DAD /* Build configuration list for PBXProject "DemoGpsRunning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C2B133A468983799BF19DFE519EDC6E /* Debug */,
+				28B58B9206980AA7E4EDC431D6992498 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
