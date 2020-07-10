@@ -13,6 +13,7 @@ protocol GpsRunningServiceDelegate {
   func isReady()
   func isDenied()
   func fire(timestamp: TimeInterval)
+  func updateTotalDistance(totalDistance: Double)
 }
 
 class GpsRunningService: NSObject {
@@ -26,6 +27,10 @@ class GpsRunningService: NSObject {
   private var runingTimestamp: TimeInterval = 0.0
   
   private var lastTimestamp: TimeInterval = 0.0
+  
+  private var totalDistance = 0.0
+  
+  private var lastLocation: CLLocation?
   
   init(delegate: GpsRunningServiceDelegate) {
     super.init()
@@ -90,6 +95,9 @@ extension GpsRunningService: CLLocationManagerDelegate {
     for location in locations {
       let newLocation = Location.init(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude, date: location.timestamp)
       LocationStorage.shared.write(location: newLocation)
+      totalDistance += location.distance(from: lastLocation ?? location)
+      lastLocation = location
+      delegate?.updateTotalDistance(totalDistance: totalDistance)
     }
   }
 }

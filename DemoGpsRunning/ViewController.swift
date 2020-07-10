@@ -52,4 +52,8 @@ extension ViewController: GpsRunningServiceDelegate {
     print(timestamp)
     timeLabel.text = Date(timeIntervalSince1970: timestamp).description
   }
+  
+  func updateTotalDistance(totalDistance: Double) {
+    print("return total distance: \(totalDistance)")
+  }
 }
