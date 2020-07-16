@@ -13,7 +13,7 @@ protocol GpsRunningServiceDelegate {
   func isReady()
   func isDenied()
   func fire(timestamp: TimeInterval)
-  func updateTotalDistance(totalDistance: Double)
+  func updateTotalDistance(service: GpsRunningService, totalDistance: Double)
 }
 
 class GpsRunningService: NSObject {
@@ -31,6 +31,24 @@ class GpsRunningService: NSObject {
   private var totalDistance = 0.0
   
   private var lastLocation: CLLocation?
+  
+  var signalStrength: SignalStrength {
+    let value = lastLocation?.horizontalAccuracy
+    guard value != nil else {
+      return .no
+    }
+    
+    switch Int(value!) {
+    case ..<0:
+      return .no
+    case 163...:
+      return .poor
+    case 48...:
+      return .average
+    default:
+      return .full
+    }
+  }
   
   init(delegate: GpsRunningServiceDelegate) {
     super.init()
@@ -82,6 +100,7 @@ class GpsRunningService: NSObject {
 }
 
 extension GpsRunningService: CLLocationManagerDelegate {
+  
   func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
     if status == CLAuthorizationStatus.authorizedWhenInUse {
       delegate?.isReady()
@@ -97,7 +116,14 @@ extension GpsRunningService: CLLocationManagerDelegate {
       LocationStorage.shared.write(location: newLocation)
       totalDistance += location.distance(from: lastLocation ?? location)
       lastLocation = location
-      delegate?.updateTotalDistance(totalDistance: totalDistance)
+      delegate?.updateTotalDistance(service: self, totalDistance: totalDistance)
     }
   }
+}
+
+enum SignalStrength: Int {
+  case no
+  case poor
+  case average
+  case full
 }
