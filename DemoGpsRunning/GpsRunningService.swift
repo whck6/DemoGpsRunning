@@ -44,7 +44,7 @@ class GpsRunningService: NSObject {
     self.locationManager.delegate = self
     self.locationManager.activityType = CLActivityType.fitness
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-    self.locationManager.distanceFilter = kCLDistanceFilterNone
+    self.locationManager.distanceFilter = 10 // avoid strange movement
     self.locationManager.allowsBackgroundLocationUpdates = true
   }
   
