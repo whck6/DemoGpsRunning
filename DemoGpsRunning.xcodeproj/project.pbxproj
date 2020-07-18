@@ -16,10 +16,12 @@
 		AB2B4C54F363C881CD77EA0E04D189AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609DDF35BE5C8761CADE333BB3152C2 /* ViewController.swift */; };
 		C60372198F80102DA6F7A23EC8586DF8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F112397E24913B0134E90EFC5EEBB2 /* Location.swift */; };
 		E4451DE04D71E1DB062BE8EC6B25AB25 /* GpsRunningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D0FD5C3D707DC71BAE5126EAF46610 /* GpsRunningService.swift */; };
+		FD923E2967FB80E9744F28FF193B8DDD /* VoiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161C34F3F9E8ED835AC993625EDF4E70 /* VoiceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0705DA6DE9E4BE57DD16EBC262417CFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		161C34F3F9E8ED835AC993625EDF4E70 /* VoiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceService.swift; sourceTree = "<group>"; };
 		19D0FD5C3D707DC71BAE5126EAF46610 /* GpsRunningService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpsRunningService.swift; sourceTree = "<group>"; };
 		31F112397E24913B0134E90EFC5EEBB2 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		49BB2E9F31F25ABC0D8658869ED21B83 /* DemoGpsRunning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoGpsRunning.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,7 @@
 				097A80227667419C8CEF37F05283C72F /* Main.storyboard */,
 				881CB25B3375C273FBEF7759A4E03B4A /* MyTimer.swift */,
 				9609DDF35BE5C8761CADE333BB3152C2 /* ViewController.swift */,
+				161C34F3F9E8ED835AC993625EDF4E70 /* VoiceService.swift */,
 			);
 			path = DemoGpsRunning;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				1FA69F62B229F94993CDB46EBF5CFAD0 /* LocationsStorage.swift in Sources */,
 				1637D63A6B02BF8FF22461DA0180052D /* MyTimer.swift in Sources */,
 				AB2B4C54F363C881CD77EA0E04D189AD /* ViewController.swift in Sources */,
+				FD923E2967FB80E9744F28FF193B8DDD /* VoiceService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

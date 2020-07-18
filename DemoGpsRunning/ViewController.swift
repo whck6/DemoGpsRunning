@@ -56,5 +56,9 @@ extension ViewController: GpsRunningServiceDelegate {
   func updateTotalDistance(service: GpsRunningService, totalDistance: Double) {
     print("return total distance: \(totalDistance)")
     print("return signal: \(service.signalStrength)")
+    
+    let string = String(format: "%.f", totalDistance)
+    // VoiceService.shared.speak(string: string)
+    VoiceService.shared.speak(format: "you are reached %@ kilometers", string: string)
   }
 }

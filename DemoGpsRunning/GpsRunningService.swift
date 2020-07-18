@@ -112,11 +112,13 @@ extension GpsRunningService: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     print(locations)
     for location in locations {
-      let newLocation = Location.init(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude, date: location.timestamp)
-      LocationStorage.shared.write(location: newLocation)
       totalDistance += location.distance(from: lastLocation ?? location)
       lastLocation = location
       delegate?.updateTotalDistance(service: self, totalDistance: totalDistance)
+      
+      // save the location to disk
+      let newLocation = Location.init(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude, date: location.timestamp)
+      LocationStorage.shared.write(location: newLocation)
     }
   }
 }

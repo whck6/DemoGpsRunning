@@ -12,7 +12,7 @@ class LocationStorage {
 
   static let shared = LocationStorage()
   
-  private var workDirectoryURL = FileManager.default.temporaryDirectory.appendingPathComponent("locations", isDirectory: true)
+  private let workDirectoryURL = FileManager.default.temporaryDirectory.appendingPathComponent("locations", isDirectory: true)
   
   init() {
     do {
